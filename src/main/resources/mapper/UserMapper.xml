@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.mapper.UserMapper">
+    <insert id="register" parameterType="com.example.pojo.User">
+        INSERT INTO user (firstname,lastname, email, modle,password)
+        VALUES (#{firstname},#{lastname}, #{email}, #{modle},#{password})
+    </insert>
+    <insert id="addRole" parameterType="com.example.pojo.UserRole">
+        INSERT INTO user_roles ( roles,rid)
+        VALUES (#{roles},#{rid})
+    </insert>
+    <select id="getRoleByemail" resultType="java.lang.String" parameterType="string">
+        SELECT id from  user as u where email=#{email}
+    </select>
+    <select id="getRByemail" resultType="java.lang.Integer">
+        SELECT id from  user as u where email=#{email}
+    </select>
+    <select id="getRoleByrid" resultType="com.example.pojo.UserRole">
+        SELECT * from user_roles where rid=#{rid}
+    </select>
+    <select id="login" resultType="java.lang.String">
+        select password  from user as u where email=#{email}
+    </select>
+
+
+</mapper>
