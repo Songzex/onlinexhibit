@@ -1,13 +1,14 @@
 server:
-  port: 5000
+  port: 8089
+  address: 192.168.1.9
 #数据源
 spring:
   # 数据库链接配置
   datasource:
-    url: jdbc:mysql://localhost:3306/exhibition?useUnicode=true&characterEncoding=UTF8&autoReconnect=true&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=UTC
+    url: jdbc:mysql://103.143.72.82:3306/comic?useUnicode=true&characterEncoding=UTF8&autoReconnect=true&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=UTC
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
-    password: root
+    password: Scy211985@
     # 链接池
     type: com.alibaba.druid.pool.DruidDataSource
     druid:
@@ -19,7 +20,9 @@ spring:
       min-idle: 1
       # 最大等待时间
       max-wait: 60000
-
+  data:
+    mongodb:
+      uri: mongodb://103.143.72.82:27017/comic
 # mybatis配置
 mybatis:
   mapper-locations: classpath*:mapper*xml
@@ -27,3 +30,25 @@ mybatis:
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
     map-underscore-to-camel-case: true
+#
+qiniu:
+  kodo:
+    # 配置accessKey
+    accessKey: oGONCQtRfbLCdWHb1VeOUPLp8Og4P3J-q80RjiIC
+    # 配置secretKey
+    secretKey: bZ8OtQY_FzGN2_9oMnuedpkE4HaGqx1zdtIKh-b1
+    # 配置空间名称
+    bucket: 2024518scycat
+    # 配置域名 tar -zxvf mysql-5.7.44-linux-glibc2.12-x86_64.tar.gz
+    # 修改密码，SQL语句后面的分号不能丢
+    ##FLUSH PRIVILEGES; 　　 　　 #刷新
+
+    ##复制解压后的mysql目录 # 解压文件至/usr/local/目录
+    #tar -zxvf mysql-5.7.20-linux-glibc2.12-x86_64.tar.gz
+    ## 重命名为 mysql
+    #mv /usr/local/mysql-5.7.44-linux-glibc2.12-x86_64/ /usr/local/mysql
+    #cp -r mysql-5.7.44-linux-glibc2.12-x86_64 /usr/local/mysql
+    #mv /opt/mysql-5.7.44-linux-glibc2.12-x86_64/ /usr/local/mysql
+    #mv /usr/opt/mysql-5.7.20-linux-glibc2.12-x86_64/ /usr/local/mysql
+    #cp /usr/local/mysql/mysql/support-files/mysql.server /etc/init.d/mysql
+    domain: sdod3qplh.hd-bkt.clouddn.com

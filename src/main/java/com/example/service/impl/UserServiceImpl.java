@@ -12,8 +12,6 @@ import java.util.List;
 public class UserServiceImpl implements UserService  {
     @Autowired
     private UserMapper userMapper;
-
-
     @Override
     public Integer getRByemail(String username) {
         return userMapper.getRByemail(username);

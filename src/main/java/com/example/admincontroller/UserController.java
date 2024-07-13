@@ -1,4 +1,4 @@
-package com.example.controller;
+package com.example.admincontroller;
 
 import com.example.R.ResponseResult;
 import com.example.config.JwtUtils;

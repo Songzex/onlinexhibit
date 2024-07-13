@@ -17,7 +17,6 @@ public class JwtBlacklist {
     public void addToBlacklist(String token) {
         blacklist.add(token);
     }
-
     // 检查 token 是否在黑名单中
     public boolean isBlacklisted(String token) {
         return blacklist.contains(token);

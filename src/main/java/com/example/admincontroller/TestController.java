@@ -1,4 +1,4 @@
-package com.example.controller;
+package com.example.admincontroller;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.servlet.http.HttpServletRequest;
 
 @RestController
-@RequestMapping("/test")
+@RequestMapping("/admin")
 @CrossOrigin
 @Slf4j
 public class TestController {
