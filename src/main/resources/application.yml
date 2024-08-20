@@ -1,14 +1,14 @@
 server:
-  port: 8089
+  port: 8087
   address: 192.168.1.9
 #数据源
 spring:
   # 数据库链接配置
   datasource:
-    url: jdbc:mysql://103.143.72.82:3306/comic?useUnicode=true&characterEncoding=UTF8&autoReconnect=true&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=UTC
+    url: jdbc:mysql://localhost:3306/fumanbl?useUnicode=true&characterEncoding=UTF8&autoReconnect=true&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=UTC
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
-    password: Scy211985@
+    password: root
     # 链接池
     type: com.alibaba.druid.pool.DruidDataSource
     druid:
@@ -22,7 +22,20 @@ spring:
       max-wait: 60000
   data:
     mongodb:
-      uri: mongodb://103.143.72.82:27017/comic
+      uri: mongodb://localhost:27017/comic
+  servlet:
+    multipart:
+      max-file-size: 50MB
+      max-request-size: 50MB
+  redis:
+    host: localhost
+    port: 6379
+    database: 2
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
 # mybatis配置
 mybatis:
   mapper-locations: classpath*:mapper*xml
@@ -30,7 +43,7 @@ mybatis:
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
     map-underscore-to-camel-case: true
-#
+#七牛云
 qiniu:
   kodo:
     # 配置accessKey
@@ -52,3 +65,5 @@ qiniu:
     #mv /usr/opt/mysql-5.7.20-linux-glibc2.12-x86_64/ /usr/local/mysql
     #cp /usr/local/mysql/mysql/support-files/mysql.server /etc/init.d/mysql
     domain: sdod3qplh.hd-bkt.clouddn.com
+#redis
+

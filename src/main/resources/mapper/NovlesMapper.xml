@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.mapper.NovlesMapper">
+
+    <resultMap id="BaseResultMap" type="com.example.pojo.Novles">
+            <id property="novleid" column="NovleID" jdbcType="INTEGER"/>
+            <result property="novleimg" column="Novleimg" jdbcType="VARCHAR"/>
+            <result property="novlecontext" column="NovleContext" jdbcType="VARCHAR"/>
+            <result property="novletype" column="NovleType" jdbcType="VARCHAR"/>
+            <result property="novlestatus" column="NovleStatus" jdbcType="VARCHAR"/>
+            <result property="novleaurthor" column="NovleAurthor" jdbcType="VARCHAR"/>
+            <result property="novlename" column="NovleName" jdbcType="VARCHAR"/>
+            <result property="createdate" column="CreateDate" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        NovleID,Novleimg,NovleContext,
+        NovleType,NovleStatus,NovleAurthor,
+        NovleName,CreateDate
+    </sql>
+</mapper>

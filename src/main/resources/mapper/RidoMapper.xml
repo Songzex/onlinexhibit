@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.mapper.RidoMapper">
+
+    <resultMap id="BaseResultMap" type="com.example.pojo.Rido">
+            <id property="ridoid" column="RidoID" jdbcType="INTEGER"/>
+            <result property="ridoname" column="RidoName" jdbcType="VARCHAR"/>
+            <result property="ridourl" column="RidoURl" jdbcType="VARCHAR"/>
+            <result property="ridostaus" column="RidoStaus" jdbcType="VARCHAR"/>
+            <result property="ridocontext" column="RidoContext" jdbcType="VARCHAR"/>
+            <result property="ridotype" column="RidoType" jdbcType="INTEGER"/>
+            <result property="ridoisvip" column="RidoIsVip" jdbcType="INTEGER"/>
+            <result property="ridoauthor" column="RidoAuthor" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        RidoID,RidoName,RidoURl,
+        RidoStaus,RidoContext,RidoType,
+        RidoIsVip,RidoAuthor
+    </sql>
+</mapper>

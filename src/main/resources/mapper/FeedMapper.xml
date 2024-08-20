@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.mapper.FeedMapper">
+
+    <resultMap id="BaseResultMap" type="com.example.pojo.Feed">
+            <id property="titleid" column="TitleID" jdbcType="INTEGER"/>
+            <result property="titlename" column="TItleName" jdbcType="VARCHAR"/>
+            <result property="topic" column="Topic" jdbcType="VARCHAR"/>
+            <result property="context" column="Context" jdbcType="VARCHAR"/>
+            <result property="author" column="Author" jdbcType="VARCHAR"/>
+            <result property="createdate" column="CreateDate" jdbcType="TIMESTAMP"/>
+            <result property="status" column="Status" jdbcType="VARCHAR"/>
+            <result property="referencecount" column="ReferenceCount" jdbcType="VARCHAR"/>
+            <result property="likecount" column="LikeCount" jdbcType="VARCHAR"/>
+            <result property="type" column="Type" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        TitleID,TItleName,Topic,
+        Context,Author,CreateDate,
+        Status,ReferenceCount,LikeCount,
+        Type
+    </sql>
+</mapper>

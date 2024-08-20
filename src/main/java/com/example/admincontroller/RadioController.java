@@ -1,4 +1,4 @@
-package com.example.admincontroller.app;
+package com.example.admincontroller;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -9,8 +9,20 @@ import org.springframework.web.bind.annotation.RestController;
  * 广播剧
  */
 @RestController
-@RequestMapping("/ReComic")
+@RequestMapping("/public")
 @CrossOrigin
 @Slf4j
 public class RadioController {
+
+
+
+
+
+
+
+
+
+
+
+
 }

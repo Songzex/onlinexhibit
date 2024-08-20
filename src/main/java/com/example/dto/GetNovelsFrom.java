@@ -9,7 +9,8 @@ import java.io.Serializable;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class GetComicFrom implements Serializable {
-    private String  ComicId;
+public class GetNovelsFrom implements Serializable {
+    private Integer novleid;
     private String Chapter;
+
 }

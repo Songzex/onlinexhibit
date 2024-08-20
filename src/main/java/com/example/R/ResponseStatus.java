@@ -3,13 +3,14 @@ package com.example.R;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
+import java.io.Serializable;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
 @Getter
 @AllArgsConstructor
-public enum ResponseStatus {
+public enum ResponseStatus implements Serializable {
     SUCCESS("200", "success"),
     FAIL("500", "failed"),
 

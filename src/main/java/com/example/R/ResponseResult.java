@@ -7,7 +7,7 @@ import java.io.Serializable;
 
 @Data
 @Builder
-public  class ResponseResult<T> {
+public  class ResponseResult<T> implements Serializable  {
 
     /**
      * response timestamp.

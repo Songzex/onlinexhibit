@@ -16,9 +16,15 @@ import javax.servlet.http.HttpServletRequest;
 public class TestController {
 
     @GetMapping("/aa")
-    @PreAuthorize("hasRole('ROLE_admin')")
+    @PreAuthorize("hasRole('ROLE_admin')")//admin是拼上去的角色
     public String getUserById(HttpServletRequest httpRequest) {
         return "out success";
+    }
+
+    @GetMapping("/info")
+    @PreAuthorize("hasAuthority('user:read')")
+    public String userInfo() {
+        return "User Info: This is some user information.";
     }
 
 }

@@ -20,6 +20,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 @Component
 public class JwtAuthenticationFilter extends OncePerRequestFilter {
@@ -31,7 +33,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
     @Autowired
     private JwtBlacklist blacklist;
 
-    //过滤操作
+    //过滤操作  （认证授权操作）
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
         String token = getJwtFromRequest(request);
@@ -44,7 +46,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
                 return;
             }
             String email = jwtUtils.getEmailFromToken(token);
-            List<GrantedAuthority> authorityList = getUserAuthorities(email);
+            Set<SimpleGrantedAuthority> authorityList = getUserAuthorities(email);
             // 在 Spring Security 上下文中设置用户认证信息
             UsernamePasswordAuthenticationToken authentication = new UsernamePasswordAuthenticationToken(email, null, authorityList);
             SecurityContextHolder.getContext().setAuthentication(authentication);
@@ -52,17 +54,19 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
 
         filterChain.doFilter(request, response);
     }
-    //获取用户权限列表并设置
-    private List<GrantedAuthority> getUserAuthorities(String email) {
+    //获取用户权限列表并设置 （授权操作）
+    private Set<SimpleGrantedAuthority> getUserAuthorities(String email) {
         // 根据用户名从数据库或其他存储中获取用户的权限信息，并转换成 Spring Security 的 GrantedAuthority 对象
         // 这里只是示例，实际情况根据项目需求来实现
         List<GrantedAuthority> authorities = new ArrayList<>();
-        List<UserRole> roleByemail =userService.getRoleByrid(userService.getRByemail(email));
+        //List<UserRole> roleByemail =userService.getRoleByrid(userService.getRByemail(email));
    /*     authorities.add(new SimpleGrantedAuthority("ROLE_USER"));//这段代码是为登陆用户 添加角色来权限的吗*/
-        for (UserRole role : roleByemail) {
-            authorities.add(new SimpleGrantedAuthority("ROLE_" + role.getRoles()));
-        }
-        return authorities;
+//        for (UserRole role : roleByemail) {
+//            authorities.add(new SimpleGrantedAuthority("ROLE_" + role.getRoles()));
+//        }
+        Set<SimpleGrantedAuthority> collect = userService.getRoleByrid(userService.getRByemail(email)).stream().
+                map(userRole -> new SimpleGrantedAuthority("ROLE_" + userRole.getRoles())).collect(Collectors.toSet());
+        return collect;
     }
     //token获取
     private String getJwtFromRequest(HttpServletRequest request) {

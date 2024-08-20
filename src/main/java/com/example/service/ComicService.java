@@ -1,5 +1,6 @@
 package com.example.service;
 
+import com.example.config.MyException;
 import com.example.dto.GetComicFrom;
 import com.example.pojo.Comic;
 import com.baomidou.mybatisplus.extension.service.IService;
@@ -19,7 +20,7 @@ public interface ComicService extends IService<Comic> {
 
     void addAdapter(Integer id, MultipartFile file) throws IOException;
 
-    List<String> getChapter(GetComicFrom from);
+    List<String> getChapter(GetComicFrom from) throws MyException;
 
     List<String> getContext(GetComicFrom from);
 }
