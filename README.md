@@ -1,6 +1,7 @@
-![小说阅读](https://github.com/user-attachments/assets/81e6b014-d8e2-4c3c-9975-76dc74f6559d)# 项目介绍！《狗儿哥漫画APP》单体架构版本
+🍎 。。。。。。想吃苹果。。。。。:🥇........
+:🦋..我会飞。。。。。。
 
-------
+![屏幕截图 2024-08-30 000353](https://github.com/user-attachments/assets/e4088844-e2fa-4080-9d8a-ca521882c797)
 
 ## 本项目含有的功能：
 
@@ -34,17 +35,16 @@
 ![推荐1-2](https://github.com/user-attachments/assets/84236b2e-4b94-478a-928a-d3bbc113d3ed)
 ![首页](https://github.com/user-attachments/assets/b1b4e09a-de36-46c4-9dc6-875d445a7c5c)
 ![社区1](https://github.com/user-attachments/assets/2e018bd5-37ac-4f4e-8eaf-b2fe40daa9e1)
-![社交1](https://github.com/user-attachments/assets/d2ac4329-bdab-485c-86bd-886aff71b0ad)
 ![收听1](https://github.com/user-attachments/assets/f0e6d4a8-b821-4935-b539-e23976c340e4)
 ![收听1-1](https://github.com/user-attachments/assets/981a28c8-0402-4200-b2cc-a1e7458c38ef)
-![社交1](https://github.com/user-attachments/assets/0736d2c5-e664-45f3-96a9-3db4ad83d66e)
-![我的好友1-1](https://github.com/user-attachments/assets/de5d8bd9-5a24-40a4-ba72-797cc86b6d46)
-![我的收藏夹1-1](https://github.com/user-attachments/assets/75c68668-4434-4025-9aa0-1529bf2688d3)
-![我的消息](https://github.com/user-attachments/assets/6a028cef-16f9-46b9-bd37-1e5e44c62450)
-![小说专栏](http![小说阅读1-2](https://github.com/user-attachments/assets/1df89bae-920f-4000-aba3-26ad437654dc)
-s://github.com/user-attachments/assets/5893e8c5-72b2-4427-b380-a5a0f2ffb91d)
 ![阅读漫画](https://github.com/user-attachments/assets/0dd48514-7749-4fe7-bba3-f7456349a907)
 ![音频推荐](https://github.com/user-attachments/assets/432f0e85-d6d6-4657-8a9c-c35429980a29)
+![小说首页](https://github.com/user-attachments/assets/830bc633-20ff-4a7a-819a-c31351dca592)
+![屏幕截图 2024-08-30 000922](https://github.com/user-attachments/assets/e463e2a3-63cb-418b-87ba-2804cf940be3)
+![屏幕截图 2024-08-30 001139](https://github.com/user-attachments/assets/c3396c1d-ba7a-47c7-b240-b42633b985f2)
+![聊天](https://github.com/user-attachments/assets/cd0fac51-50b4-461f-bad3-2518278e4d83)
+![屏幕截图 2024-08-30 001411](https://github.com/user-attachments/assets/8b38b525-22eb-4f19-86c4-bb7e9d9f2c9f)
+
 
 
 
